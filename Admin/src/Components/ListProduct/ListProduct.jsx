@@ -18,7 +18,7 @@ function ListProduct() {
     }, []);
 
     const remove_product=async(id)=>{
-        console.log("clicked on remove icon")
+        // console.log("clicked on remove icon")
         await fetch('http://localhost:4000/removeproduct',{
             method:'POST',
             headers:{
