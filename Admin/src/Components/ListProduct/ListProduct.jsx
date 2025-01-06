@@ -7,7 +7,7 @@ import cross_icon from '../../assets/cross_icon.png'
 function ListProduct() {
     const [allproducts, setAllProducts] = useState([]);
     const fetchInfo = async () => {
-        await fetch('http://localhost:4000/allproducts')
+        await fetch('https://e-commerce-a4no.onrender.com/allproducts')
             .then((res) => res.json())
             .then((data) => {
                 setAllProducts(data);
@@ -18,8 +18,8 @@ function ListProduct() {
     }, []);
 
     const remove_product=async(id)=>{
-        // console.log("clicked on remove icon")
-        await fetch('http://localhost:4000/removeproduct',{
+        console.log("clicked on remove icon")
+        await fetch('https://e-commerce-a4no.onrender.com/removeproduct',{
             method:'POST',
             headers:{
                 Accept:'application/json',
